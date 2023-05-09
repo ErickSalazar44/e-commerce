@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/e-commerce.png">
+    <title>E-commers</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/cart.js" defer></script>
+    <script src="assets/js/scroll.js" defer></script>
+</head>
+<body class="">
+    
+    <header >
+        <nav class="navbar">
+            <a href="#home" class="navbar_logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav_logo">
+                    <title>Academlo Logo</title>
+                        <path d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                        </path>
+                </svg>
+                <span>STORE</span>
+            </a>
+
+            <div class="navbar_menu active_navbar_menu" >
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+            </div>
+
+            <div class="navbar_icons">
+                <i class='bx bx-moon darkmode'></i>
+                <i class='bx bx-sun icon-son darkmode'></i>
+                <i class="bx bx-shopping-bag" id="card_product">
+                    <div class="total_productos"><span>0</span></div>
+                </i>
+                <i class="bx bxs-dashboard menu"></i>
+            </div>
+
+        </nav>
+    </header>
+
+    <section id="home" class="content_home">
+        <div class="home_header">
+            <div class="img_promocional">
+                <div class="contenedor_slider">
+                    <div class="slider">
+                        <img class="slide" src="assets/img/sweater2.png" alt="">
+                        <img class="slide" src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270450/eCommerce/sweater4_kxcvab.png" alt="">
+                        <img class="slide" src="assets/img/sweater2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home_body">
+            <h2>New Sweatshirt COLLECTIONS 2023</h2>
+            <p>
+                Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2023 series, with a modern design.
+            </p>
+            <p class="home_body_price">$14.00</p>
+            <a href="#products"><button>Show more</button></a>
+        </div>
+
+    </section>
+
+    <main >
+
+        <div class="producto_CONTENT" id="products">
+
+            <div class="content_filter" >
+                <div class="filter" data-filter="all">
+                    <h4>Show all</h4>
+                    <p>Show all products</p>
+                </div>
+
+                <div class="filter" data-filter=".shirt">
+                    <h4>Shirt</h4>
+                    <p>7 products</p>
+                </div>
+
+                <div class="filter" data-filter=".hoddie">
+                    <h4>Hoddie</h4>
+                    <p>6 products</p>
+                </div>
+
+                <div class="filter" data-filter=".sweater">
+                    <h4>Sweater</h4>
+                    <p>5 products</p>
+                </div>
+            </div>
+
+            <div class="productos"></div> 
+    
+        </div>
+    </main>
+
+    <div class="content_card active_contentCard">
+        <i class="bx bx-x" id="iconCloseCart"></i>
+
+        <div class="contentCard_product">
+        </div>
+
+        <div class="contentCard_total">
+            <div class="compraTotal_contentCard">
+
+            </div>
+            <button class="btn_compra" id="btnCompra">Comprar</button>
+        </div>
+    </div>
+
+    <section class="modal desactivarModal">
+    </section>
+
+    <section class="contentLoading">
+        <div class="loading">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="load__gif">
+                <title>Academlo Logo</title>
+                <g>
+                    <g>
+                        <path d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                        </path>
+                        <path d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </section>
+    <footer>
+        <section class="footer_content">
+            <div class="footer_inf">
+                <h3>Our information</h3>
+                <ul>
+                    <li>
+                        <a href="#home">Lima - Perú</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer_inf">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#home">Support Center</a></li>
+
+                    <li><a href="#home">Customer Support</a></li>
+
+                    <li><a href="#home">About Us</a></li>
+
+                    <li><a href="#home">CopyRight</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_inf">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#products">Hoodies</a></li>
+
+                    <li><a href="#products">Shirts</a></li>
+
+                    <li><a href="#products">Show all</a></li>
+
+                    <li><a href="#products">Sweatshirts</a></li>
+                </ul>
+            </div>
+            <div class="footer_inf ">
+                <h3>Social</h3>
+
+                <ul class="footer_Anclas">
+                    <li><a href="#home">
+                        <i class='bx bxl-facebook-square'></i>
+                    </a></li>
+                    <li><a href="#home">
+                        <i class='bx bxl-twitter' ></i>
+                    </a></li>
+                    <li><a href="#home">
+                        <i class='bx bxl-instagram' ></i>
+                    </a></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <div>
+            <p>Erick Josep Salazar 
+                <span>
+                    <a href="https://www.linkedin.com/in/erick-josep-salazar-8b8b6024b" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href=""><i class='bx bxl-github'></i></a>
+                </span>
+            </p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
