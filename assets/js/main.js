@@ -167,7 +167,6 @@ function logicaDelcarrito(datos) {
             }
             printProductCard(datos);
             precioTotalDeProdcutos(datos);
-            dibujarProductos(datos);
             // actualizamos los datos en localeStorage
             window.localStorage.setItem("card", JSON.stringify(datos.card));
         }
